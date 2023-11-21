@@ -1,0 +1,12 @@
+---
+
+- name: Fedora Build Playbook
+  hosts: all
+  tasks:
+    - name: test connection
+      ansible.builtin.command: hostname
+      register: output
+    
+    - name: debug output
+      debug:
+        var: output
