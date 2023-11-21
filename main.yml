@@ -6,7 +6,12 @@
     - name: test connection
       ansible.builtin.command: hostname
       register: output
+      changed_when: false
     
     - name: debug output
       debug:
-        var: output
+        var: output.stdout_lines
+
+    - name: Run Fedora Build Role
+      ansible.builtin.include_role:
+        name: fed_apps
