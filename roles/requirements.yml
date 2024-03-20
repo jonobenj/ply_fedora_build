@@ -1,0 +1,4 @@
+---
+
+- name: fed_apps
+  src: https://github.com/jonobenj/fed_apps.git
